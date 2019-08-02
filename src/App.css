@@ -1,33 +1,88 @@
-.App {
+.center {
+  margin: auto;
+  width: 50%;
+  padding: 10px;
+}
+table {
+  font-family: sans-serif;
+  width: 100%;
+  border-spacing: 0;
+  border-collapse: separate;
+  table-layout: fixed;
+  margin-bottom: 50px;
+}
+table thead tr th {
+  background: #626e7e;
+  color: #d1d5db;
+  padding: 0.5em;
+  overflow: hidden;
+}
+table thead tr th:first-child {
+  border-radius: 3px 0 0 0;
+}
+table thead tr th:last-child {
+  border-radius: 0 3px 0 0;
+}
+table thead tr th i {
+  vertical-align: middle;
+  font-size: 2em;
+}
+table thead tr th .long {
+  background: #626e7e;
+  font-family: sans-serif;
+  color: #d1d5db;
+}
+table tbody tr {
+  background: #90c9eb;
+}
+table tbody tr:nth-child(odd) {
+  background: #b4dcf3;
+}
+table tbody tr:nth-child(4n + 0) td {
+  border-bottom: 1px solid #626e7e;
+}
+table tbody tr td {
   text-align: center;
+  vertical-align: middle;
+  border-left: 1px solid #626e7e;
+  position: relative;
+  height: 22px;
+  cursor: pointer;
 }
-
-.App-logo {
-  animation: App-logo-spin infinite 20s linear;
-  height: 40vmin;
-  pointer-events: none;
+table tbody tr td:last-child {
+  border-right: 1px solid #626e7e;
 }
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+table tbody tr td.hour {
+  font-size: 20px;
+  padding: 0;
+  color: #626e7e;
+  background: #fff;
+  border-bottom: 1px solid #626e7e;
+  border-collapse: separate;
+  min-width: 60px;
+  cursor: default;
 }
-
-.App-link {
-  color: #61dafb;
+table tbody tr td.hour span {
+  display: block;
 }
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+@media (max-width: 60em) {
+  table tbody tr td.hour span {
+    transform: rotate(270deg);
+    -webkit-transform: rotate(270deg);
+    -moz-transform: rotate(270deg);
+    font-size: 15px;
   }
-  to {
-    transform: rotate(360deg);
+}
+@media (max-width: 27em) {
+  table thead tr th {
+    font-size: 65%;
+  }
+  table tbody tr td.hour {
+    font-size: 1.7em;
+  }
+  table tbody tr td.hour span {
+    transform: translateY(16px) rotate(270deg);
+    -webkit-transform: translateY(16px) rotate(270deg);
+    -moz-transform: translateY(16px) rotate(270deg);
   }
 }
