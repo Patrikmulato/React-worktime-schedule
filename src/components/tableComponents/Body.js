@@ -1,284 +1,59 @@
-import React from 'react';
+import React, { Fragment } from 'react';
+
+// Table
+let rows = [];
+for (let i = 8; i <= 20; i++) {
+  let decider = 'am';
+  if (i >= 12) decider = 'pm';
+  rows.push(
+    <Fragment>
+      <tr>
+        <td className='hour' rowSpan='4'>
+          <span>
+            {i} {decider}
+          </span>
+        </td>
+        <td />
+        <td />
+        <td />
+        <td />
+        <td />
+        <td />
+        <td />
+      </tr>
+      <tr>
+        <td />
+        <td />
+        <td />
+        <td />
+        <td />
+        <td />
+        <td />
+      </tr>
+      <tr>
+        <td />
+        <td />
+        <td />
+        <td />
+        <td />
+        <td />
+        <td />
+      </tr>
+      <tr>
+        <td />
+        <td />
+        <td />
+        <td />
+        <td />
+        <td />
+        <td />
+      </tr>
+    </Fragment>
+  );
+}
 
 const Body = () => {
-  return (
-    <tbody>
-      <tr>
-        <td className='hour' rowSpan='4'>
-          <span>8 am</span>
-        </td>
-        <td />
-        <td />
-        <td />
-        <td />
-        <td />
-        <td />
-        <td />
-      </tr>
-      <tr>
-        <td />
-        <td />
-        <td />
-        <td />
-        <td />
-        <td />
-        <td />
-      </tr>
-      <tr>
-        <td />
-        <td />
-        <td />
-        <td />
-        <td />
-        <td />
-        <td />
-      </tr>
-      <tr>
-        <td />
-        <td />
-        <td />
-        <td />
-        <td />
-        <td />
-        <td />
-      </tr>
-      <tr>
-        <td className='hour' rowSpan='4'>
-          <span>10 am</span>
-        </td>
-        <td />
-        <td />
-        <td />
-        <td />
-        <td />
-        <td />
-        <td />
-      </tr>
-      <tr>
-        <td />
-        <td />
-        <td />
-        <td />
-        <td />
-        <td />
-        <td />
-      </tr>
-      <tr>
-        <td />
-        <td />
-        <td />
-        <td />
-        <td />
-        <td />
-        <td />
-      </tr>
-      <tr>
-        <td />
-        <td />
-        <td />
-        <td />
-        <td />
-        <td />
-        <td />
-      </tr>
-
-      <tr>
-        <td className='hour' rowSpan='4'>
-          <span>12 am</span>
-        </td>
-        <td />
-        <td />
-        <td />
-        <td />
-        <td />
-        <td />
-        <td />
-      </tr>
-      <tr>
-        <td />
-        <td />
-        <td />
-        <td />
-        <td />
-        <td />
-        <td />
-      </tr>
-      <tr>
-        <td />
-        <td />
-        <td />
-        <td />
-        <td />
-        <td />
-        <td />
-      </tr>
-      <tr>
-        <td />
-        <td />
-        <td />
-        <td />
-        <td />
-        <td />
-        <td />
-      </tr>
-      <tr>
-        <td className='hour' rowSpan='4'>
-          <span>2 pm</span>
-        </td>
-        <td />
-        <td />
-        <td />
-        <td />
-        <td />
-        <td />
-        <td />
-      </tr>
-      <tr>
-        <td />
-        <td />
-        <td />
-        <td />
-        <td />
-        <td />
-        <td />
-      </tr>
-      <tr>
-        <td />
-        <td />
-        <td />
-        <td />
-        <td />
-        <td />
-        <td />
-      </tr>
-      <tr>
-        <td />
-        <td />
-        <td />
-        <td />
-        <td />
-        <td />
-        <td />
-      </tr>
-      <tr>
-        <td className='hour' rowSpan='4'>
-          <span>4 pm</span>
-        </td>
-        <td />
-        <td />
-        <td />
-        <td />
-        <td />
-        <td />
-        <td />
-      </tr>
-      <tr>
-        <td />
-        <td />
-        <td />
-        <td />
-        <td />
-        <td />
-        <td />
-      </tr>
-      <tr>
-        <td />
-        <td />
-        <td />
-        <td />
-        <td />
-        <td />
-        <td />
-      </tr>
-      <tr>
-        <td />
-        <td />
-        <td />
-        <td />
-        <td />
-        <td />
-        <td />
-      </tr>
-      <tr>
-        <td className='hour' rowSpan='4'>
-          <span>6 pm</span>
-        </td>
-        <td />
-        <td />
-        <td />
-        <td />
-        <td />
-        <td />
-        <td />
-      </tr>
-      <tr>
-        <td />
-        <td />
-        <td />
-        <td />
-        <td />
-        <td />
-        <td />
-      </tr>
-      <tr>
-        <td />
-        <td />
-        <td />
-        <td />
-        <td />
-        <td />
-        <td />
-      </tr>
-      <tr>
-        <td />
-        <td />
-        <td />
-        <td />
-        <td />
-        <td />
-        <td />
-      </tr>
-      <tr>
-        <td className='hour' rowSpan='4'>
-          <span>8 pm</span>
-        </td>
-        <td />
-        <td />
-        <td />
-        <td />
-        <td />
-        <td />
-        <td />
-      </tr>
-      <tr>
-        <td />
-        <td />
-        <td />
-        <td />
-        <td />
-        <td />
-        <td />
-      </tr>
-      <tr>
-        <td />
-        <td />
-        <td />
-        <td />
-        <td />
-        <td />
-        <td />
-      </tr>
-      <tr>
-        <td />
-        <td />
-        <td />
-        <td />
-        <td />
-        <td />
-        <td />
-      </tr>
-    </tbody>
-  );
+  return <tbody>{rows}</tbody>;
 };
 
 export default Body;
