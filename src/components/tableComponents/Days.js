@@ -1,23 +1,25 @@
 import React from 'react';
+import moment from 'moment';
 
-const days = [
-  'Monday',
-  'Tuesday',
-  'Wednesday',
-  'Thursday',
-  'Friday',
-  'Saturday',
-  'Sunday'
-];
+let days = moment.weekdays();
 
 const Days = () => {
   return (
     <thead>
       <tr>
         <th />
-        {days.map(day => (
-          <th>
-            <h6 className='long center'>{day}</h6>
+        {days.map((day, i) => (
+          <th key={day}>
+            <p className='date center'>
+              {moment(new Date())
+                .add(i, 'days')
+                .format('MMM DD')}
+            </p>
+            <h6 className='long center'>
+              {moment(new Date())
+                .add(i, 'days')
+                .format('dddd')}
+            </h6>
           </th>
         ))}
       </tr>

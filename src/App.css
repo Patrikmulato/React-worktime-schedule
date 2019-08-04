@@ -1,8 +1,15 @@
+/**********************************
+OWN RULES
+***********************************/
 .center {
   margin: auto;
   width: 50%;
   padding: 10px;
 }
+
+/**********************************
+TABLE 
+***********************************/
 table {
   font-family: sans-serif;
   width: 100%;
@@ -32,6 +39,14 @@ table thead tr th .long {
   font-family: sans-serif;
   color: #d1d5db;
 }
+table thead tr th .date {
+  padding-bottom: 0;
+  padding-top: 0;
+  background: #626e7e;
+  font-family: sans-serif;
+  color: #d1d5db;
+}
+
 table tbody tr {
   background: #90c9eb;
 }
