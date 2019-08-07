@@ -8,29 +8,11 @@ for (let i = 8; i <= 20; i++) {
   rows.push(
     <Fragment>
       <tr>
-        <td className='hour' rowSpan='4'>
+        <td className='hour' rowSpan='2'>
           <span>
             {i} {decider}
           </span>
         </td>
-        <td />
-        <td />
-        <td />
-        <td />
-        <td />
-        <td />
-        <td />
-      </tr>
-      <tr>
-        <td />
-        <td />
-        <td />
-        <td />
-        <td />
-        <td />
-        <td />
-      </tr>
-      <tr>
         <td />
         <td />
         <td />
