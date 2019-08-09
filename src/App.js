@@ -1,7 +1,7 @@
 import React, { Fragment } from 'react';
 import Header from './components/Header';
 import Table from './components/Table';
-import ColorPicker from './components/ColorPicker';
+import SetTimer from './components/SetTimer';
 import './App.css';
 
 function App() {
@@ -9,7 +9,7 @@ function App() {
     <Fragment>
       <Header />
       <Table />
-      <ColorPicker />
+      <SetTimer />
     </Fragment>
   );
 }
