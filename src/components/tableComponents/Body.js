@@ -6,8 +6,8 @@ for (let i = 8; i <= 20; i++) {
   let decider = 'am';
   if (i >= 12) decider = 'pm';
   rows.push(
-    <Fragment>
-      <tr>
+    <Fragment key={i}>
+      <tr key={`${i}a`}>
         <td className='hour' rowSpan='2'>
           <span>
             {i} {decider}
@@ -21,7 +21,7 @@ for (let i = 8; i <= 20; i++) {
         <td />
         <td />
       </tr>
-      <tr>
+      <tr key={`${i}b`}>
         <td />
         <td />
         <td />
