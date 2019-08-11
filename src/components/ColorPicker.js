@@ -1,12 +1,6 @@
-import React, { useState } from 'react';
+import React from 'react';
 
-const ColorPicker = () => {
-  const [color, setColor] = useState('');
-
-  const pickColor = () => {
-    console.log(this);
-    setColor(color);
-  };
+const ColorPicker = ({ color, pickColor }) => {
   return (
     <div>
       <span
@@ -14,8 +8,16 @@ const ColorPicker = () => {
         className='dot'
         style={{ backgroundColor: '#FF4136' }}
       />
-      <span className='dot' style={{ backgroundColor: '#FFDC00' }} />
-      <span className='dot' style={{ backgroundColor: '#2ECC40' }} />
+      <span
+        onClick={pickColor}
+        className='dot'
+        style={{ backgroundColor: '#FFDC00' }}
+      />
+      <span
+        onClick={pickColor}
+        className='dot'
+        style={{ backgroundColor: '#2ECC40' }}
+      />
     </div>
   );
 };

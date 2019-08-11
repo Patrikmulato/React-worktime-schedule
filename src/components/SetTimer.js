@@ -1,7 +1,7 @@
 import React from 'react';
 import ColorPicker from './ColorPicker';
 
-const SetTimer = () => {
+const SetTimer = ({ pickColor, color }) => {
   return (
     <div className='card container'>
       <div className='row' style={{ marginTop: '20px', marginBottom: '20px' }}>
@@ -9,7 +9,7 @@ const SetTimer = () => {
           <h2>Set your own time</h2>
         </div>
         <div className='col'>
-          <ColorPicker />
+          <ColorPicker color={color} pickColor={pickColor} />
         </div>
       </div>
 
