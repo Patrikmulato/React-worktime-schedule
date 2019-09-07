@@ -1,6 +1,6 @@
 import React from 'react';
 
-const ColorPicker = ({ color, pickColor }) => {
+const ColorPicker = ({ pickColor }) => {
   return (
     <div>
       <span

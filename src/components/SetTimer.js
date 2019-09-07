@@ -1,7 +1,10 @@
 import React from 'react';
 import ColorPicker from './ColorPicker';
+import moment from 'moment';
 
-const SetTimer = ({ pickColor, color }) => {
+let days = moment.weekdays();
+
+const SetTimer = ({ pickColor, pickTime, daySetter }) => {
   return (
     <div className='card container'>
       <div className='row' style={{ marginTop: '20px', marginBottom: '20px' }}>
@@ -9,28 +12,24 @@ const SetTimer = ({ pickColor, color }) => {
           <h2>Set your own time</h2>
         </div>
         <div className='col'>
-          <ColorPicker color={color} pickColor={pickColor} />
+          <ColorPicker pickColor={pickColor} />
         </div>
       </div>
 
       <div className='row' style={{ marginBottom: '20px' }}>
         <div className='col'>
-          <select>
-            <option value='Monday'>Monday</option>
-            <option value='Tuesday'>Tuesday</option>
-            <option value='Wednesday'>Wednesday</option>
-            <option value='Thursday'>Thursday</option>
-            <option value='Friday'>Friday</option>
-            <option value='Saturday'>Saturday</option>
-            <option value='Sunday'>Sunday</option>
+          <select onChange={daySetter} defaultValue="Monday">
+            {days.map(day => (
+              <option id='setDay' key={day} value={day}>{day}</option>
+            ))}
           </select>
         </div>
         <div className='col'>
           <small style={{ marginRight: '20px' }}>From</small>
           <input
             type='time'
-            id='appt'
-            name='appt'
+            id='from'
+            name='from'
             min='08:00'
             max='20:00'
             required
@@ -40,12 +39,17 @@ const SetTimer = ({ pickColor, color }) => {
           <small style={{ marginRight: '20px' }}>To</small>
           <input
             type='time'
-            id='appt'
-            name='appt'
+            id='to'
+            name='to'
             min='08:00'
             max='20:00'
             required
           />
+        </div>
+        <div className='col'>
+          <button type='submit' value='OK' onClick={pickTime}>
+            OK
+          </button>
         </div>
       </div>
     </div>
